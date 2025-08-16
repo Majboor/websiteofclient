@@ -4,6 +4,12 @@ import { Card, CardContent } from "@/components/ui/card"
 import { MapPin, Phone, Clock, Star } from "lucide-react"
 import Image from "next/image"
 import { MobileNav } from "@/components/mobile-nav"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: 'Shahi Dera Restaurant - Authentic Pakistani Cuisine in Lakemba',
+  description: 'Welcome to Shahi Dera Restaurant in Lakemba, Sydney. Experience authentic Pakistani flavors with traditional recipes and warm hospitality.',
+}
 
 export default function Home() {
   return (
