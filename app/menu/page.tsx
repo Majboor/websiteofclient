@@ -3,6 +3,12 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { MapPin, Phone, Clock } from "lucide-react"
 import { MobileNav } from "@/components/mobile-nav"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: 'Menu - Shahi Dera Restaurant',
+  description: 'Explore our authentic Pakistani menu featuring traditional dishes like Chicken Biryani, Lamb Karahi, and Beef Nihari at Shahi Dera Restaurant.',
+}
 
 export default function MenuPage() {
   return (

@@ -3,6 +3,12 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { MapPin, Phone, Clock } from "lucide-react"
 import { MobileNav } from "@/components/mobile-nav"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: 'Contact Us - Shahi Dera Restaurant',
+  description: 'Contact Shahi Dera Restaurant in Lakemba, Sydney. Book a table, order online, or get directions to our authentic Pakistani restaurant.',
+}
 
 export default function ContactPage() {
   return (
