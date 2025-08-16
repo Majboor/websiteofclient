@@ -2,6 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { MapPin, Phone, Clock } from "lucide-react"
+import { MobileNav } from "@/components/mobile-nav"
 
 export default function ContactPage() {
   return (
@@ -15,7 +16,7 @@ export default function ContactPage() {
       }}
     >
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-md border-b border-gray-800">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-md border-b border-white/10">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-3">
             <Image src="/logo.png" alt="Shahi Dera Restaurant" width={60} height={60} />
@@ -40,12 +41,15 @@ export default function ContactPage() {
             </Link>
           </nav>
 
-          <Link
-            href="/menu"
-            className="bg-[#00A63E] text-white px-6 py-2 rounded-lg hover:bg-[#008a35] transition-colors"
-          >
-            Order Now
-          </Link>
+          <div className="flex items-center gap-4">
+            <Link
+              href="/menu"
+              className="hidden md:block bg-[#00A63E] text-white px-6 py-2 rounded-lg hover:bg-[#008a35] transition-all duration-200"
+            >
+              Order Now
+            </Link>
+            <MobileNav />
+          </div>
         </div>
       </header>
 

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { MapPin, Phone, Clock, Star } from "lucide-react"
 import Image from "next/image"
+import { MobileNav } from "@/components/mobile-nav"
 
 export default function Home() {
   return (
@@ -17,16 +18,17 @@ export default function Home() {
       }}
     >
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm bg-black/20">
-        <div className="container mx-auto px-4 py-6">
+      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/30 border-b border-white/10">
+        <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <Image src="/logo.png" alt="Shahi Dera Restaurant" width={80} height={80} className="h-12 w-auto" />
+            <div className="flex items-center space-x-3">
+              <Image src="/logo.png" alt="Shahi Dera Restaurant" width={60} height={60} className="h-12 w-auto" />
               <div>
                 <h1 className="text-xl font-bold text-white">Shahi Dera</h1>
                 <p className="text-sm text-[#00A63E]">Authentic Pakistani Cuisine</p>
               </div>
             </div>
+            
             <nav className="hidden md:flex items-center space-x-8">
               <a href="#home" className="text-[#00A63E] hover:text-[#00A63E] transition-colors font-medium">
                 Home
@@ -40,8 +42,14 @@ export default function Home() {
               <Link href="/contact" className="text-white hover:text-[#00A63E] transition-colors">
                 Contact
               </Link>
-              <Button className="bg-[#00A63E] hover:bg-[#008A35] px-6">Order Now</Button>
             </nav>
+            
+            <div className="flex items-center space-x-4">
+              <Button className="hidden md:block bg-[#00A63E] hover:bg-[#008A35] px-6 py-2 rounded-lg transition-all duration-200">
+                Order Now
+              </Button>
+              <MobileNav />
+            </div>
           </div>
         </div>
       </header>

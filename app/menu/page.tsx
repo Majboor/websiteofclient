@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { MapPin, Phone, Clock } from "lucide-react"
+import { MobileNav } from "@/components/mobile-nav"
 
 export default function MenuPage() {
   return (
@@ -15,7 +16,7 @@ export default function MenuPage() {
       />
 
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/20">
+      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/30 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <Link href="/" className="flex items-center space-x-3">
@@ -41,12 +42,15 @@ export default function MenuPage() {
               </Link>
             </nav>
 
-            <Link
-              href="#order"
-              className="bg-[#00A63E] text-white px-6 py-2 rounded-lg hover:bg-[#008a35] transition-colors"
-            >
-              Order Now
-            </Link>
+            <div className="flex items-center gap-4">
+              <Link
+                href="#order"
+                className="hidden md:block bg-[#00A63E] text-white px-6 py-2 rounded-lg hover:bg-[#008a35] transition-all duration-200"
+              >
+                Order Now
+              </Link>
+              <MobileNav />
+            </div>
           </div>
         </div>
       </header>
